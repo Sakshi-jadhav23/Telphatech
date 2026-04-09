@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TelphaVastra — Premium Indian Textiles & Handloom</title>
+<meta name="description" content="Discover TelphaVastra textiles and artisan-crafted fashion — rooted in tradition, styled for today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<script>
+  tailwind.config = { corePlugins: { preflight: false } };
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<style>
+/* Additional professional enhancements */
+body { background: #faf9f7; }
+.section { padding: 100px 0; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+/* Smooth transitions */
+* { transition-property: background-color, color, border-color, box-shadow, transform; transition-duration: 0.3s; transition-timing-function: ease; }
+
+/* Typography refinements */
+h1, h2, h3, h4, h5, h6 { letter-spacing: -0.01em; }
+p { line-height: 1.8; }
+
+/* Professional hover effects */
+.pick-card, .occ-card { border: 1px solid rgba(166,61,50,.08); }
+.pick-card:hover, .occ-card:hover { border-color: var(--coffee); box-shadow: 0 16px 40px var(--shadow-m); }
+
+/* Elegant spacing */
+.sec-label { font-weight: 600; letter-spacing: 0.05em; }
+.view-link { position: relative; padding-bottom: 4px; }
+.view-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--coffee); transition: width 0.3s ease; }
+.view-link:hover::after { width: 100%; }
+
+/* Loading animation */
+@keyframes shimmer { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+.loading { animation: shimmer 2s ease-in-out infinite; }
+
+/* Smooth scroll behavior */
+html { scroll-behavior: smooth; }
+
+/* Professional footer styling */
+footer { background: linear-gradient(180deg, #faf9f7 0%, #f0e8e0 100%); padding: 80px 32px 40px; }
+.footer-content { max-width: 1280px; margin: 0 auto; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px; }
+.footer-section h5 { font-family: var(--font-head); font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 20px; }
+.footer-section a { display: block; font-size: 13px; color: var(--light); padding: 8px 0; transition: color 0.3s; }
+.footer-section a:hover { color: var(--coffee); padding-left: 4px; }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: var(--light); }
+.footer-socials { display: flex; gap: 12px; }
+.footer-socials a { width: 36px; height: 36px; border-radius: 50%; background: rgba(166,61,50,.08); display: flex; align-items: center; justify-content: center; color: var(--coffee); transition: all 0.3s; }
+.footer-socials a:hover { background: var(--coffee); color: #fff; transform: translateY(-3px); }
+
+/* Newsletter section */
+.newsletter { background: linear-gradient(135deg, var(--coffee-d) 0%, var(--coffee) 100%); padding: 60px 32px; border-radius: 20px; text-align: center; margin: 80px 32px; color: #fff; }
+.newsletter h3 { font-family: var(--font-head); font-size: 32px; margin-bottom: 12px; }
+.newsletter p { font-size: 15px; opacity: 0.9; margin-bottom: 24px; }
+.newsletter-form { display: flex; gap: 10px; max-width: 500px; margin: 0 auto; }
+.newsletter-form input { flex: 1; padding: 14px 20px; border: none; border-radius: 50px; font-family: inherit; }
+.newsletter-form button { padding: 14px 30px; background: rgba(255,255,255,.2); color: #fff; border: 2px solid rgba(255,255,255,.5); border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.newsletter-form button:hover { background: rgba(255,255,255,.3); border-color: #fff; }
+
+/* Breadcrumb nav */
+.breadcrumb { font-size: 12px; color: var(--light); margin-bottom: 20px; }
+.breadcrumb a { color: var(--coffee); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* Professional container */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+/* Enhanced modals */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.5); animation: fadeIn 0.3s; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal.active { display: flex; align-items: center; justify-content: center; }
+.modal-content { background: #fff; padding: 40px; border-radius: 20px; max-width: 500px; width: 90%; box-shadow: 0 20px 60px rgba(0,0,0,.3); animation: slideUp 0.3s ease; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+/* Professional buttons */
+.btn-primary { background: var(--coffee); color: #fff; padding: 14px 30px; border: none; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.btn-primary:hover { background: var(--coffee-d); transform: translateY(-2px); box-shadow: 0 8px 24px var(--shadow-m); }
+.btn-secondary { background: transparent; color: var(--coffee); border: 2px solid var(--coffee); padding: 12px 28px; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.btn-secondary:hover { background: var(--coffee); color: #fff; }
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .section { padding: 60px 0; }
+  .hero-content h1 { font-size: 36px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter h3 { font-size: 24px; }
+}
+
+@media (max-width: 480px) {
+  .wrap { padding: 0 16px; }
+  .section { padding: 40px 0; }
+  .hero-content h1 { font-size: 28px; line-height: 1.2; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── TELPHAVASTRA PROFESSIONAL NAVBAR ───────────────────────────── -->
+<!-- Top strip -->
+<div class="tstrip">
+  <div style="display:flex;align-items:center;gap:1.2rem;">
+    <a href="tel:+917559225557"><i class="bi bi-telephone-fill"></i> +91 75592 25557</a>
+    <a href="mailto:telphatech@gmail.com"><i class="bi bi-envelope-fill"></i> telphatech@gmail.com</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <div class="tsoc">
+      <a class="ig" href="#"><i class="bi bi-instagram"></i></a>
+      <a class="fb" href="#"><i class="bi bi-facebook"></i></a>
+      <a class="pi" href="#"><i class="bi bi-pinterest"></i></a>
+      <a class="yt" href="#"><i class="bi bi-youtube"></i></a>
+      <a class="tw" href="#"><i class="bi bi-twitter-x"></i></a>
+      <a class="wa" href="#"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <span style="opacity:.25;color:#fff">|</span>
+    <a href="https://telphatech.com" target="_blank"><i class="bi bi-globe2"></i> telphatech.com</a>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav id="mainNav" style="position:relative">
+  <div class="nav-main">
+    <a href="#" class="brand">Telpha<em>Vastra</em></a>
+
+    <ul class="nlinks">
+      <li><a href="#hero"><i class="bi bi-house-heart ic-home"></i> Home</a></li>
+      <li class="has-dd">
+        <a href="#picks"><i class="bi bi-bag-heart ic-shop"></i> Shop <i class="bi bi-chevron-down" style="font-size:9px;opacity:.45;margin-left:2px"></i></a>
+        <div class="dd">
+          <a href="#"><i class="bi bi-stars"></i> New Arrivals</a>
+          <a href="#"><i class="bi bi-person-dress"></i> Women</a>
+          <a href="#"><i class="bi bi-person-standing"></i> Men</a>
+          <a href="#"><i class="bi bi-hearts"></i> Kids</a>
+          <a href="#"><i class="bi bi-gem"></i> Festive</a>
+          <a href="#"><i class="bi bi-handbag"></i> Accessories</a>
+        </div>
+      </li>
+      <li class="has-dd">
+        <a href="#heritage-showcase"><i class="bi bi-grid-1x2 ic-col"></i> Collections <i class="bi bi-chevron-down" style="font-size:9px;opacity:.45;margin-left:2px"></i></a>
+        <div class="dd">
+          <a href="#"><i class="bi bi-flower1"></i> Kurtas</a>
+          <a href="#"><i class="bi bi-droplet-half"></i> Sarees</a>
+          <a href="#"><i class="bi bi-sun"></i> Lehengas</a>
+          <a href="#"><i class="bi bi-lightning-charge"></i> Western</a>
+        </div>
+      </li>
+      <li><a href="#sale-spotlight"><i class="bi bi-fire ic-sale"></i> Sale</a></li>
+      <li><a href="#newsletter-section"><i class="bi bi-headset ic-cont"></i> Contact</a></li>
+    </ul>
+
+    <div class="nctrl">
+      <button class="ibtn s" title="Search" onclick="toggleSearch()"><i class="bi bi-search"></i></button>
+
+      <button class="gpill ai-pill" onclick="openTryon()" title="AI Try-On">
+        <i class="bi bi-magic"></i> AI Try-On
+      </button>
+      <button class="gpill cp-pill" onclick="openW()" title="Win Coupon">
+        <i class="bi bi-gift"></i> Win Coupon
+      </button>
+
+      <div class="ndiv"></div>
+
+      <select class="lsel">
+        <option>EN</option><option>हिं</option><option>मर</option><option>GJ</option>
+      </select>
+
+      <button class="ibtn w" id="wishBtn" title="Wishlist">
+        <i class="bi bi-heart"></i>
+        <span class="cbadge" id="wBadge">0</span>
+      </button>
+
+      <button class="ibtn c" title="Cart" style="position:relative; cursor:default;">
+        <i class="bi bi-bag"></i>
+        <span class="cbadge" id="cBadge">0</span>
+      </button>
+
+      <button class="ibtn th" title="Theme" id="tBtn" onclick="toggleT()">
+        <i class="bi bi-moon-stars" id="tIco"></i>
+      </button>
+
+      <div class="ndiv"></div>
+
+      <button class="auth-btn" title="Login / Register" onclick="alert('Login & Register!')">
+        <i class="bi bi-person-plus-fill"></i>
+      </button>
+
+      <div class="prof-wrap">
+        <div class="prof-icon"><i class="bi bi-person-fill"></i></div>
+        <div class="prof-dd">
+          <div class="pinfo">
+            <div class="pname">Priya Sharma</div>
+            <div class="pemail">priya@email.com</div>
+          </div>
+          <a href="#" class="pda p1"><i class="bi bi-person-circle"></i> My Profile</a>
+          <a href="#" class="pda p2"><i class="bi bi-bag-heart"></i> My Orders</a>
+          <a href="#" class="pda p3"><i class="bi bi-heart-pulse"></i> Wishlist</a>
+          <a href="#" class="pda p4"><i class="bi bi-geo-alt"></i> Addresses</a>
+          <a href="#" class="pda p5"><i class="bi bi-ticket-perforated"></i> My Coupons</a>
+          <a href="#" class="pda p6"><i class="bi bi-magic"></i> AI Trial Studio</a>
+          <a href="#" class="pda p7"><i class="bi bi-star-fill"></i> Rewards</a>
+          <a href="#" class="pda p8"><i class="bi bi-gear"></i> Settings</a>
+          <button class="logout" onclick="alert('Logged out!')"><i class="bi bi-box-arrow-right"></i> Log Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Bar Dropdown -->
+  <div
+    id="searchContainer"
+    class="absolute top-full left-0 w-full bg-white shadow-md origin-top hidden transition-all duration-300 z-40 border-t"
+    style="border-color: rgba(61,26,14,0.12);"
+    aria-hidden="true"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <form class="flex items-center space-x-4" onsubmit="event.preventDefault(); handleSearch();">
+        <div class="relative flex-grow">
+          <i class="fa-solid fa-search absolute left-4 top-1/2 transform -translate-y-1/2" style="color: var(--coffee);"></i>
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search sarees, fabrics, kurtas..."
+            class="w-full pl-12 pr-4 py-3 border-none focus:outline-none focus:ring-1 rounded-sm placeholder-gray-500"
+            style="background: var(--cream); color: var(--dark); --tw-ring-color: var(--coffee);"
+            autocomplete="off"
+          >
+        </div>
+        <button
+          type="submit"
+          class="text-white px-8 py-3 uppercase tracking-wider text-sm transition-colors rounded-sm font-medium"
+          style="background: var(--coffee);"
+        >
+          Search
+        </button>
+        <button type="button" id="closeSearchBtn" class="p-2 text-gray-500 transition-colors" onclick="closeSearch()">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO SECTION CAROUSEL ───────────────────────────────────────── -->
+<section class="hero hero-carousel" id="hero" data-aos="fade-up" data-aos-delay="100">
+  <!-- Floating orbs (keep existing animation) -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+  <div class="orb orb-5"></div>
+  <!-- Premium background accents (keep existing) -->
+  <div class="hero-grid"></div>
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-spark hero-spark-1"></div>
+  <div class="hero-spark hero-spark-2"></div>
+
+  <div class="hero-stage group">
+    <!-- Slide 1 -->
+    <div class="carousel-item is-active" data-idx="0">
+      <img id="heroSlideImg0" src="https://www.shutterstock.com/image-photo/create-blog-post-perfume-brand-260nw-2553388775.jpg" alt="Indian Festival Collection" class="carousel-bg" loading="lazy">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner hero-left">
+        <div class="hero-copy">
+          <div class="hero-kicker" id="heroTag">Women • Sarees • Suits • Lehengas</div>
+          <h1 class="hero-title" id="heroTitle">Women’s <span>Heritage Weaves</span></h1>
+          <p class="hero-desc" id="heroDesc">Premium silk sarees, festive lehengas and artisan suit sets — curated for celebrations and everyday elegance.</p>
+          <div class="hero-actions">
+            <a href="#picks" class="hero-btn hero-btn-primary">Shop Women</a>
+            <a href="#" class="hero-btn hero-btn-ghost">View Lookbook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item" data-idx="1">
+      <img id="heroSlideImg1" src="assets/images/men_ethnic.png" alt="Men's Collection" class="carousel-bg" loading="lazy">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner hero-right">
+        <!-- Floating circles specific to this slide -->
+        <div class="orb orb-s2-1"></div>
+        <div class="orb orb-s2-2"></div>
+        <div class="orb orb-s2-3"></div>
+        <div class="hero-copy">
+          <div class="hero-kicker">Men • Kurtas • Sherwanis • Fabrics</div>
+          <h1 class="hero-title">Men’s <span>Classic Craft</span></h1>
+          <p class="hero-desc">Hand-embroidered kurtas, festive sherwanis and premium fabrics — tailored for modern tradition.</p>
+          <div class="hero-actions">
+            <a href="#picks" class="hero-btn hero-btn-primary">Shop Men</a>
+            <a href="#" class="hero-btn hero-btn-ghost">Explore New</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item" data-idx="2">
+      <img id="heroSlideImg2" src="assets/images/kids_ethnic.png" alt="Kids' Collection" class="carousel-bg" loading="lazy">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner hero-center">
+        <div class="hero-copy">
+          <div class="hero-kicker">Kids • Festive Sets • Comfort Cotton</div>
+          <h1 class="hero-title">Kids <span>Festive Comfort</span></h1>
+          <p class="hero-desc">Soft cottons, playful festive sets, and easy-to-wear styles — made for comfort, made to shine.</p>
+          <div class="hero-actions">
+            <a href="#picks" class="hero-btn hero-btn-primary">Shop Kids</a>
+            <a href="#" class="hero-btn hero-btn-ghost">Kids Edit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicators -->
+    <div class="carousel-indicators" aria-label="Hero carousel indicators">
+      <button class="carousel-indicator is-active" onclick="setSlide(0,this)" aria-label="Slide 1"></button>
+      <button class="carousel-indicator" onclick="setSlide(1,this)" aria-label="Slide 2"></button>
+      <button class="carousel-indicator" onclick="setSlide(2,this)" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Left/Right arrows -->
+    <button id="carouselPrev" class="carousel-arrow left" onclick="prevSlide()" aria-label="Previous slide">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="carouselNext" class="carousel-arrow right" onclick="nextSlide()" aria-label="Next slide">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+</section>
+
+<!-- ── COLOR SWATCH STRIP ────────────────────────────────────────────
+<section style="background: var(--cream); padding: 20px 32px; border-bottom: 1px solid var(--border);">
+  <div class="wrap">
+    <div style="display: flex; align-items: center; gap: 16px; overflow-x: auto; padding: 8px 0;">
+      <span style="font-size: 12px; font-weight: 600; color: var(--light); white-space: nowrap;">Filter by Color:</span>
+      <button class="swatch-item active" onclick="setSwatch(this,'all')" title="All colors">
+        <div class="swatch-dots-row">
+          <span style="background:#8B6A5B"></span><span style="background:#EFD9D5"></span>
+          <span style="background:#BFC9B3"></span><span style="background:#E8DCCB"></span>
+        </div>
+        <span>All</span>
+      </button>
+      <button class="swatch-item" onclick="setSwatch(this,'coffee')" title="Coffee color"><div class="swatch-circle" style="background:#8B6A5B"></div><span>Coffee</span></button>
+      <button class="swatch-item" onclick="setSwatch(this,'blush')" title="Blush color"><div class="swatch-circle" style="background:#EFD9D5"></div><span>Blush</span></button>
+      <button class="swatch-item" onclick="setSwatch(this,'sage')" title="Sage color"><div class="swatch-circle" style="background:#BFC9B3"></div><span>Sage</span></button>
+      <button class="swatch-item" onclick="setSwatch(this,'ivory')" title="Ivory color"><div class="swatch-circle" style="background:#E8DCCB"></div><span>Ivory</span></button>
+      <button class="swatch-item" onclick="setSwatch(this,'cream')" title="Cream color"><div class="swatch-circle" style="background:#F6EEE8"></div><span>Cream</span></button>
+    </div>
+  </div>
+</section> -->
+
+<!-- ── TODAY'S DEALS STRIP (Amazon / Flipkart style) ─────────────── -->
+<section class="deals-strip" data-aos="fade-up">
+  <div class="deals-header">
+    <h3>
+      <i class="bi bi-lightning-charge-fill" style="color:#f59e0b"></i>
+      Today's Deals
+      <span class="deal-timer" id="dealTimer">00:00:00</span>
+    </h3>
+    <a href="#picks" class="view-link">See All Deals <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="deals-scroll">
+    <div class="deal-card" onclick="addToCart(this)">
+      <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=200&h=200&fit=crop&fm=webp" alt="Kanjivaram Saree" loading="lazy">
+      <div class="deal-card-info"><p>Kanjivaram Silk Saree</p><span class="deal-off-badge">38% off</span><span class="deal-was-price">₹6,999 → ₹4,299</span></div>
+    </div>
+    <div class="deal-card">
+      <img src="assets/images/kids_ethnic.png" alt="Boys Kurta Set" loading="lazy">
+      <div class="deal-card-info"><p>Boys Silk Kurta Set</p><span class="deal-off-badge">40% off</span><span class="deal-was-price">₹1,999 → ₹1,199</span></div>
+    </div>
+    <div class="deal-card">
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=200&h=200&fit=crop&fm=webp" alt="Designer Lehenga" loading="lazy">
+      <div class="deal-card-info"><p>Designer Lehenga Set</p><span class="deal-off-badge">41% off</span><span class="deal-was-price">₹22,000 → ₹12,999</span></div>
+    </div>
+    <div class="deal-card">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=200&h=200&fit=crop&fm=webp" alt="Block Print Dupatta" loading="lazy">
+      <div class="deal-card-info"><p>Block Print Dupatta</p><span class="deal-off-badge">30% off</span><span class="deal-was-price">₹899 → ₹629</span></div>
+    </div>
+    <div class="deal-card">
+      <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=200&h=200&fit=crop&fm=webp" alt="Linen Fabric" loading="lazy">
+      <div class="deal-card-info"><p>Pure Linen Fabric</p><span class="deal-off-badge">33% off</span><span class="deal-was-price">₹899/m → ₹599/m</span></div>
+    </div>
+    <div class="deal-card">
+      <img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=200&h=200&fit=crop&fm=webp" alt="Printed Saree" loading="lazy">
+      <div class="deal-card-info"><p>Printed Linen Saree</p><span class="deal-off-badge">37% off</span><span class="deal-was-price">₹2,999 → ₹1,899</span></div>
+    </div>
+    <div class="deal-card">
+      <img src="assets/images/festival.png" alt="Indian Festival Outfit" loading="lazy">
+      <div class="deal-card-info"><p>Indian Festival Lehenga</p><span class="deal-off-badge">45% off</span><span class="deal-was-price">₹18,000 → ₹9,899</span></div>
+    </div>
+    <div class="deal-card">
+      <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=200&h=200&fit=crop&fm=webp" alt="Silk Blouse" loading="lazy">
+      <div class="deal-card-info"><p>Raw Silk Blouse Fabric</p><span class="deal-off-badge">25% off</span><span class="deal-was-price">₹1,199 → ₹899</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── OCCASIONS SECTION ───────────────────────────────────────────── -->
+<section id="collections-grid" class="section occasions-section" data-aos="fade-up" data-aos-delay="200">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-label">Curated Collections</div>
+      <h2 class="sec-title textile-title-animate">Shop by Occasion</h2>
+    </div>
+    <div class="occasions-grid">
+      <div class="occ-card occ-large">
+        <img src="assets/images/bridal.png" alt="Bridal collection" loading="lazy" width="500" height="600">
+        <div class="occ-overlay">
+          <span>Ethereal Elegance</span>
+          <h3>Bridal Collection</h3>
+          <a href="#" class="occ-btn">Explore</a>
+        </div>
+      </div>
+      <div class="occ-card">
+        <img src="assets/images/festival.png" alt="Festival wear" loading="lazy" width="400" height="360">
+        <div class="occ-overlay">
+          <span>Spirit of Tradition</span>
+          <h3>Festive Weaves</h3>
+          <a href="#" class="occ-btn">Explore</a>
+        </div>
+      </div>
+      <div class="occ-card">
+        <img src="assets/images/party.png" alt="Party wear" loading="lazy" width="400" height="360">
+        <div class="occ-overlay">
+          <span>Midnight Glamour</span>
+          <h3>Party Wear</h3>
+          <a href="#" class="occ-btn">Explore</a>
+        </div>
+      </div>
+      <div class="occ-card">
+        <img src="assets/images/casual.png" alt="Casual collection" loading="lazy" width="400" height="360">
+        <div class="occ-overlay">
+          <span>Everyday Sophistication</span>
+          <h3>Casual Elegance</h3>
+          <a href="#" class="occ-btn">Explore</a>
+        </div>
+      </div>
+      <div class="occ-card">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=600&fit=crop&fm=webp" alt="Office formals" loading="lazy" width="400" height="360">
+        <div class="occ-overlay">
+          <span>Professional Power</span>
+          <h3>Office Formals</h3>
+          <a href="#" class="occ-btn">Explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SHOP BY CATEGORY — 3D FLIP CARDS ──────────────────────────── -->
+<section class="flip-section" id="categories" data-aos="fade-up" data-aos-delay="100">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="sec-label">Browse Categories</div>
+      <h2 class="sec-title textile-title-animate">Shop by Category</h2>
+      <p style="color:var(--light);font-size:14px;margin-top:8px">Hover a card to explore collections</p>
+    </div>
+    <div class="flip-grid">
+
+      <!-- Sarees -->
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=300&fit=crop&fm=webp" alt="Sarees" loading="lazy">
+            <div class="flip-overlay"><span>Classic Indian</span><h3>Sarees</h3></div>
+          </div>
+          <div class="flip-back sarees">
+            <h3>Sarees</h3>
+            <ul><li>Kanjivaram Silk</li><li>Banarasi Weave</li><li>Printed Linen</li><li>Chiffon &amp; Georgette</li></ul>
+            <a href="#picks" class="flip-back-cta">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Women -->
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=300&fit=crop&fm=webp" alt="Women" loading="lazy">
+            <div class="flip-overlay"><span>For Her</span><h3>Women's Wear</h3></div>
+          </div>
+          <div class="flip-back women">
+            <h3>Women</h3>
+            <ul><li>Lehengas &amp; Suits</li><li>Kurta Sets</li><li>Festive Collection</li><li>Casual Wear</li></ul>
+            <a href="#picks" class="flip-back-cta">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Men -->
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="assets/images/men_ethnic.png" alt="Men" loading="lazy">
+            <div class="flip-overlay"><span>For Him</span><h3>Men's Wear</h3></div>
+          </div>
+          <div class="flip-back men">
+            <h3>Men</h3>
+            <ul><li>Kurtas &amp; Sherwanis</li><li>Linen Fabrics</li><li>Festive Wear</li><li>Casual Cotton</li></ul>
+            <a href="#picks" class="flip-back-cta">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kids -->
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="assets/images/kids_ethnic.png" alt="Kids" loading="lazy">
+            <div class="flip-overlay"><span>Little Ones</span><h3>Kids' Wear</h3></div>
+          </div>
+          <div class="flip-back kids">
+            <h3>Kids</h3>
+            <ul><li>Festive Sets</li><li>Soft Cottons</li><li>Comfort Wear</li><li>Party Outfits</li></ul>
+            <a href="#picks" class="flip-back-cta">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Festive -->
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="assets/images/festival.png" alt="Festive" loading="lazy">
+            <div class="flip-overlay"><span>Celebrations</span><h3>Festive Edit</h3></div>
+          </div>
+          <div class="flip-back festive">
+            <h3>Festive</h3>
+            <ul><li>Bridal Collection</li><li>Wedding Wear</li><li>Diwali Specials</li><li>Gift Sets</li></ul>
+            <a href="#picks" class="flip-back-cta">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fabrics -->
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=400&h=300&fit=crop&fm=webp" alt="Fabrics" loading="lazy">
+            <div class="flip-overlay"><span>Raw Material</span><h3>Fabrics</h3></div>
+          </div>
+          <div class="flip-back fabrics">
+            <h3>Fabrics</h3>
+            <ul><li>Pure Silk</li><li>Premium Linen</li><li>Block Print</li><li>Handloom Cotton</li></ul>
+            <a href="#picks" class="flip-back-cta">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED PRODUCTS ─────────────────────────────────────────── -->
+<section class="section picks-section" id="picks" data-aos="fade-up" data-aos-delay="250">
+  <div class="wrap">
+    <div class="picks-head">
+      <div>
+        <div class="sec-label">Premium Selection</div>
+        <h2 class="sec-title textile-title-animate">Our Curated Picks</h2>
+      </div>
+      <div class="picks-tabs">
+        <button class="ptab active" onclick="filterPicks(this,'all')">All</button>
+        <button class="ptab" onclick="filterPicks(this,'women')">Women</button>
+        <button class="ptab" onclick="filterPicks(this,'men')">Men</button>
+        <button class="ptab" onclick="filterPicks(this,'kids')">Kids</button>
+        <button class="ptab" onclick="filterPicks(this,'festive')">Festive</button>
+        <button class="ptab" onclick="filterPicks(this,'sale')">On Sale</button>
+      </div>
+      <a href="#" class="view-link">View All Products <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="picks-scroller" id="picksScroller">
+      <!-- Product cards will be dynamically loaded -->
+      <div class="pick-card" data-cat="women festive">
+        <div class="pick-img">
+          <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=320&h=400&fit=crop&fm=webp" alt="Kanjivaram Saree" loading="lazy" width="320" height="400">
+          <span class="pick-tag new">New</span>
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Kanjivaram House</span>
+          <h4>Pure Silk Kanjivaram Saree</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(4,250)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹4,299</span>
+            <span class="was">M.R.P: ₹6,999</span>
+            <span class="off">(38% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Tomorrow</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pick-card" data-cat="women festive">
+        <div class="pick-img">
+          <img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=320&h=400&fit=crop&fm=webp" alt="Banarasi Silk Saree" loading="lazy" width="320" height="400">
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Heritage Weaves</span>
+          <h4>Handwoven Banarasi Silk Saree</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(950)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹1,899</span>
+            <span class="was">M.R.P: ₹2,999</span>
+            <span class="off">(37% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Tomorrow</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pick-card" data-cat="women festive sale">
+        <div class="pick-img">
+          <img src="assets/images/party.png" alt="Designer Lehenga" loading="lazy" width="320" height="400">
+          <span class="pick-tag new">Popular</span>
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Bridal Studio</span>
+          <h4>Designer Party Wear Set</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(3,110)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹12,999</span>
+            <span class="was">M.R.P: ₹22,000</span>
+            <span class="off">(41% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Friday</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pick-card" data-cat="men">
+        <div class="pick-img">
+          <img src="https://assets0.mirraw.com/images/13377525/image_original_long_webp.webp?1751709760" alt="Boys Outfit" loading="lazy" width="320" height="400">
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Premium Textiles</span>
+          <h4>Pure Linen Shirt Fabric</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(1,240)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹599/m</span>
+            <span class="was">M.R.P: ₹899/m</span>
+            <span class="off">(33% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Tomorrow</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extra card 1: Bridal Silk Saree -->
+      <div class="pick-card" data-cat="women festive">
+        <div class="pick-img">
+          <img src="assets/images/bridal.png" alt="Bridal Saree" loading="lazy" width="320" height="400">
+          <span class="pick-tag new">Trending</span>
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Bridal Studio</span>
+          <h4>Bridal Silk Wedding Saree</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(5,500)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹8,499</span>
+            <span class="was">M.R.P: ₹14,000</span>
+            <span class="off">(39% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Saturday</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pick-card" data-cat="men festive sale">
+        <div class="pick-img">
+          <img src="assets/images/kids_ethnic.png" alt="Boys Ethnic Wear" loading="lazy" width="320" height="400">
+          <span class="pick-tag sale">Sale</span>
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Artisan Craft</span>
+          <h4>Chikankari Hand-Embroidered Kurta</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(1,820)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹1,199</span>
+            <span class="was">M.R.P: ₹1,999</span>
+            <span class="off">(40% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Wednesday</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+      <!-- Extra card 2: Linen Kurta -->
+      <div class="pick-card" data-cat="men">
+        <div class="pick-img">
+          <img src="https://i.ytimg.com/vi/IXJkcoEPr2U/hqdefault.jpg" alt="Boys Sherwani" loading="lazy" width="320" height="400">
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Cotton Roots</span>
+          <h4>Premium Linen Kurta</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(825)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹1,499</span>
+            <span class="was">M.R.P: ₹2,299</span>
+            <span class="off">(35% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Tomorrow</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extra card 3: Block Print Dupatta -->
+      <div class="pick-card" data-cat="women sale">
+        <div class="pick-img">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=320&h=400&fit=crop&fm=webp" alt="Block Print Dupatta" loading="lazy" width="320" height="400">
+          <span class="pick-tag sale">Hot Deal</span>
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Block Print Co.</span>
+          <h4>Hand-block Print Cotton Dupatta</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(610)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹499</span>
+          </div>
+          <div class="pick-colors">
+            <span style="background:#EFD9D5"></span>
+            <span style="background:#BFC9B3"></span>
+            <span style="background:#E8DCCB"></span>
+          </div>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Men Product 1 -->
+      <div class="pick-card" data-cat="men festive">
+        <div class="pick-img">
+          <img src="https://diademstore.com/cdn/shop/files/29287_1_a5dd60a4-104b-4148-9ebc-58f387273a61.jpg?v=1744100576" alt="Boys Sherwani" loading="lazy" width="320" height="400">
+          <span class="pick-tag new">Trending</span>
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Royal Threads</span>
+          <h4>Men's Velvet Wedding Sherwani</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(420)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹8,999</span>
+            <span class="was">M.R.P: ₹12,999</span>
+            <span class="off">(30% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Tomorrow</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Kids Product 1 -->
+      <div class="pick-card" data-cat="kids festive">
+        <div class="pick-img">
+          <img src="assets/images/kids_ethnic.png" alt="Kids Ethnic Set" loading="lazy" width="320" height="400">
+          <span class="pick-tag new">New</span>
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Little Weaves</span>
+          <h4>Kids Silk Festive Kurta Set</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(890)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹1,299</span>
+            <span class="was">M.R.P: ₹1,999</span>
+            <span class="off">(35% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Wednesday</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Kids Product 2 -->
+      <div class="pick-card" data-cat="kids festive sale">
+        <div class="pick-img">
+          <img src="assets/images/festival.png" alt="Kids Lehenga" loading="lazy" width="320" height="400">
+          <span class="pick-tag sale">Hot Deal</span>
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Tiny Trends</span>
+          <h4>Girls Festival Lehenga Choli</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(1,150)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹1,599</span>
+            <span class="was">M.R.P: ₹2,499</span>
+            <span class="off">(36% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Friday</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boys Product 1 (Mirraw) -->
+      <div class="pick-card" data-cat="kids festive boys men">
+        <div class="pick-img">
+          <img src="https://assets0.mirraw.com/images/13377525/image_original_long_webp.webp?1751709760" alt="Boys Traditional Kurta" loading="lazy" width="320" height="400">
+          <span class="pick-tag new">Trending</span>
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Mirraw</span>
+          <h4>Boys Traditional Kurta Pajama</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(840)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹1,499</span>
+            <span class="was">M.R.P: ₹2,199</span>
+            <span class="off">(31% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Tomorrow</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boys Product 2 (Diadem) -->
+      <div class="pick-card" data-cat="kids festive sale boys men">
+        <div class="pick-img">
+          <img src="https://diademstore.com/cdn/shop/files/29287_1_a5dd60a4-104b-4148-9ebc-58f387273a61.jpg?v=1744100576" alt="Boys Handloom Sherwani" loading="lazy" width="320" height="400">
+          <span class="pick-tag sale">Hot Deal</span>
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Diadem</span>
+          <h4>Boys Premium Handloom Sherwani</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(1,200)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹2,999</span>
+            <span class="was">M.R.P: ₹4,599</span>
+            <span class="off">(34% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Friday</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boys Product 3 (YouTube thumb) -->
+      <div class="pick-card" data-cat="kids festive boys men">
+        <div class="pick-img">
+          <img src="https://i.ytimg.com/vi/IXJkcoEPr2U/hqdefault.jpg" alt="Boys Indo-Western" loading="lazy" width="320" height="400">
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Festive Edit</span>
+          <h4>Boys Festive Indo-Western Set</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(440)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹1,899</span>
+            <span class="was">M.R.P: ₹2,500</span>
+            <span class="off">(24% off)</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Saturday</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boys Product 4 (Manyavar Truncated link) -->
+      <div class="pick-card" data-cat="kids boys men">
+        <div class="pick-img">
+          <img src="https://manyavar.scene7.com/is/image/manyavar/HP_Hero_Banner_M_06-05-2025-09-46?$WT_HP%2FMLP%2FWLP_Hero_M$" onerror="this.src='assets/images/kids_ethnic.png'" alt="Manyavar Boys Ethnic" loading="lazy" width="320" height="400">
+          <button class="pick-wish" onclick="toggleWish(this)"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="pick-info">
+          <span class="pick-brand">Manyavar</span>
+          <h4>Classic Boys Ethnic Wear</h4>
+          <div class="pick-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(530)</span></div>
+          <div class="pick-price">
+            <span class="cur">₹3,499</span>
+          </div>
+          <p class="delivery-info">FREE Delivery by <strong>Tomorrow</strong></p>
+          <div class="pick-actions">
+            <button class="btn-view" onclick="window.location.href='#'">View</button>
+            <button class="btn-add-cart" onclick="addToCart(this)">
+              <span class="btn-text">Add to Cart</span>
+              <i class="fas fa-shopping-bag bag-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="scroller-btns">
+      <button onclick="scrollPicks(-1)"><i class="fas fa-chevron-left"></i></button>
+      <button onclick="scrollPicks(1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ── AI TRY-ON + WIN COUPON MID SECTION ─────────────────────────
+     Placed BEFORE the Heritage Collection as requested
+     ──────────────────────────────────────────────────────────── -->
+<section class="ai-mid-section" id="ai-features" data-aos="fade-up">
+  <div class="wrap">
+
+    <!-- Section heading -->
+    <div class="sec-head center" style="margin-bottom:40px">
+      <div class="sec-label">Smart Experience</div>
+      <h2 class="sec-title textile-title-animate">Try It. Win It. Love It.</h2>
+      <p style="color:var(--light);font-size:15px;margin-top:10px;max-width:500px;margin-left:auto;margin-right:auto">
+        Experience the future of textile shopping — AI virtual try-on &amp; exclusive daily rewards.
+      </p>
+    </div>
+
+    <div class="ai-mid-grid">
+
+      <!-- AI Try-On Card (purple) -->
+      <div class="ai-card ai-tryon-card">
+        <div class="ai-card-orb orb-a"></div>
+        <div class="ai-card-orb orb-b"></div>
+        <div class="ai-card-badge">✨ AI Powered</div>
+        <span class="ai-card-icon ai-float">🪄</span>
+        <div class="ai-card-label">Virtual Studio</div>
+        <h2 class="ai-card-title">AI Try-On</h2>
+        <p class="ai-card-desc">
+          Upload your photo &amp; virtually try on sarees, kurtas, and lehengas from our full collection — before you buy.
+        </p>
+        <button class="ai-card-btn" onclick="openTryon()">
+          <i class="bi bi-camera-fill"></i> Try On Now
+        </button>
+      </div>
+
+      <!-- Win Coupon Card (pink) -->
+      <div class="ai-card ai-coupon-card">
+        <div class="ai-card-orb orb-a"></div>
+        <div class="ai-card-orb orb-b"></div>
+        <div class="ai-card-badge">🎁 Daily Spins</div>
+        <span class="ai-card-icon gift-bounce">🎰</span>
+        <div class="ai-card-label">Lucky Rewards</div>
+        <h2 class="ai-card-title">Win Coupons!</h2>
+        <p class="ai-card-desc">
+          Spin the lucky wheel every day and win exclusive discounts — up to 20% off, free shipping &amp; more!
+        </p>
+        <button class="ai-card-btn" onclick="openW()">
+          <i class="bi bi-gift-fill"></i> Spin &amp; Win
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── HERITAGE COLLECTION SHOWCASE ───────────────────────────── -->
+<section id="heritage-showcase" class="heritage-showcase" data-aos="fade-up">
+  <div class="wrap">
+    <div class="heritage-card">
+      <img src="assets/images/festival.png" alt="TelphaVastra Heritage Collection" loading="lazy">
+      <div class="heritage-overlay"></div>
+      <div class="heritage-content">
+        <span class="heritage-label">New Arrival</span>
+        <h2>The Heritage <br> Collection</h2>
+        <p>Inspired by ancestral craftsmanship and timeless silhouettes. Every weave in our Heritage Collection tells a story of elegance across generations.</p>
+        <div class="heritage-actions">
+          <a href="#picks" class="heritage-btn primary">Shop the Story</a>
+          <a href="#" class="heritage-btn ghost">View Lookbook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WEDDING EDIT SPOTLIGHT ───────────────────────────────── -->
+<section id="sale-spotlight" class="wedding-edit" data-aos="fade-in" data-aos-duration="1000">
+  <img src="assets/images/bridal.png" alt="TelphaVastra Wedding Edit" loading="lazy">
+  <div class="wedding-overlay"></div>
+  <div class="wedding-pattern"></div>
+  <div class="wedding-content">
+    <div class="wedding-title-row">
+      <i class="fa-solid fa-gem"></i>
+      <h2>The Wedding Edit</h2>
+      <i class="fa-solid fa-gem"></i>
+    </div>
+    <p>Curated textile looks and festive essentials for your perfect day.</p>
+    <a href="#picks" class="wedding-btn">Explore Collection</a>
+  </div>
+</section>
+
+<!-- ── PREMIUM FEATURES BAR ────────────────────────────────────────── -->
+<div class="features-bar" data-aos="fade-up" data-aos-delay="150">
+  <div class="feat"><i class="fas fa-truck-fast"></i><div><b>Free Shipping</b><span>Above ₹999</span></div></div>
+  <div class="feat-sep"></div>
+  <div class="feat"><i class="fas fa-rotate-left"></i><div><b>15-Day Returns</b><span>Hassle-free</span></div></div>
+  <div class="feat-sep"></div>
+  <div class="feat"><i class="fas fa-shield-halved"></i><div><b>Secure Payment</b><span>100% encrypted</span></div></div>
+  <div class="feat-sep"></div>
+  <div class="feat"><i class="fas fa-headset"></i><div><b>Expert Support</b><span>24/7 available</span></div></div>
+  <div class="feat-sep"></div>
+  <div class="feat"><i class="fas fa-certificate"></i><div><b>Certified</b><span>Handloom authentic</span></div></div>
+</div>
+
+<!-- ── NEWSLETTER SECTION ──────────────────────────────────────────── -->
+<section id="newsletter-section" class="newsletter" data-aos="fade-up" data-aos-delay="300">
+  <h3>Stay Updated with TelphaVastra</h3>
+  <p>Get exclusive deals, new collections, and insider tips delivered to your inbox</p>
+  <form class="newsletter-form" onsubmit="subscribe(event)">
+    <input type="email" placeholder="Enter your email address" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- ── TELPHAVASTRA FOOTER ────────────────────────────────────────── -->
+<footer class="telpha-footer" data-aos="fade-up" data-aos-delay="350">
+  <div class="finn">
+    <div class="frow">
+      <div>
+        <div class="fbrand">TelphaVastra<small>BY TELPHATECH LLP · PUNE</small></div>
+        <p class="fdesc">Handcrafted fashion for the modern Indian soul. Rooted in tradition, styled for today.</p>
+      </div>
+      <div class="fcon">
+        <a href="tel:+917559225557"><i class="bi bi-telephone-fill"></i> +91 75592 25557</a>
+        <a href="mailto:telphatech@gmail.com"><i class="bi bi-envelope-fill"></i> telphatech@gmail.com</a>
+        <a href="https://telphatech.com" target="_blank"><i class="bi bi-globe2"></i> telphatech.com</a>
+        <a href="#"><i class="bi bi-geo-alt-fill"></i> Pune, Maharashtra, India</a>
+      </div>
+      <div>
+        <div style="font-family:'Montserrat',sans-serif;font-size:10.5px;color:#a07060;letter-spacing:.08em;font-weight:700;margin-bottom:10px;">FOLLOW US</div>
+        <div class="fsoc">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-pinterest"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="fbtm">
+      <div>Crafted with <i class="bi bi-heart-fill fheart"></i> by TelphaTech LLP, Pune</div>
+      <div class="flinks">
+        <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Shipping</a><a href="#">Returns</a>
+      </div>
+      <div>© 2026 TelphaTech LLP. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── MODALS ────────────────────────────────────────────────────── -->
+<!-- Cart Sidebar Removed -->
+
+<!-- Spin Wheel Modal -->
+<div id="spinModal" class="modal">
+  <div class="wmod">
+    <button class="cwh" onclick="closeSpinModal()"><i class="fas fa-times"></i></button>
+    <h3>🎁 Lucky Spin</h3>
+    <p>Spin to win amazing discounts!</p>
+    <canvas id="wheelCanvas" width="260" height="260" style="margin:20px 0"></canvas>
+    <div class="cres" id="spinResult"></div>
+    <button id="spinBtn" class="spinbtn" onclick="spinWheel()">SPIN TO WIN</button>
+    <span class="wptr">👉</span>
+  </div>
+</div>
+
+<!-- Wheel Modal -->
+<div class="wov" id="wOv">
+  <div class="wmod">
+    <button class="cwh" onclick="closeW()"><i class="bi bi-x-lg"></i></button>
+    <h3>Spin &amp; Win!</h3>
+    <p>Spin to claim your exclusive Telpha Vastra coupon</p>
+    <div style="position:relative;display:inline-block;margin-bottom:.5rem;">
+      <canvas id="wCv" width="220" height="220"></canvas>
+      <div class="wptr">▶</div>
+    </div><br>
+    <button class="spinbtn" id="sBtn" onclick="doSpin()"><i class="bi bi-arrow-clockwise"></i> Spin Now!</button>
+    <div class="cres" id="cRes"></div>
+  </div>
+</div>
+
+<!-- AI Try-On Modal -->
+<div id="tryonModal" class="modal" onclick="if(event.target===this) closeTryon()">
+  <div class="modal-content" style="max-width: 600px; position:relative;">
+    <button class="close-btn" onclick="closeTryon()" style="position: absolute; top: 14px; right: 14px; background: rgba(255,255,255,.9); border: 1px solid var(--border); width: 42px; height: 42px; border-radius: 12px; font-size: 18px; cursor: pointer; z-index: 5; display:flex;align-items:center;justify-content:center;"><i class="fas fa-times"></i></button>
+    <h2 style="font-family: var(--font-head); margin-bottom: 20px;">Virtual Try-On</h2>
+    <p style="color: var(--light); margin-bottom: 20px;">Upload your photo to virtually try on our collection</p>
+    <div id="tryonUpload" style="border: 2px dashed var(--border); padding: 40px; text-align: center; border-radius: 12px; margin-bottom: 20px; cursor: pointer;" onclick="document.getElementById('photoInput').click()">
+      <i class="fas fa-cloud-upload-alt" style="font-size: 32px; color: var(--coffee); margin-bottom: 10px; display: block;"></i>
+      <p>Click to upload your photo</p>
+      <input type="file" id="photoInput" hidden onchange="handleTryonUpload(this)">
+    </div>
+    <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+      <button class="tc" style="flex: 1; padding: 12px; border: 2px solid var(--border); background: #fff; border-radius: 8px; cursor: pointer;" onclick="this.style.borderColor='var(--coffee)'; this.style.background='rgba(166,61,50,.05)'">Saree</button>
+      <button class="tc" style="flex: 1; padding: 12px; border: 2px solid var(--border); background: #fff; border-radius: 8px; cursor: pointer;">Kurta</button>
+      <button class="tc" style="flex: 1; padding: 12px; border: 2px solid var(--border); background: #fff; border-radius: 8px; cursor: pointer;">Lehenga</button>
+    </div>
+    <button class="btn-primary" onclick="generateTryon()" style="width: 100%;">Generate Try-On</button>
+  </div>
+</div>
+
+<!-- Chat Widget -->
+<!-- Avatar always visible above the FAB button -->
+<img id="chatFabAvatar" src="assets/images/chat_avatar.png" alt="Telpha Assistant" class="chat-fab-avatar" onclick="toggleChat()">
+
+<button id="chatFab" class="chat-fab" type="button" onclick="toggleChat()" aria-label="Open chat">
+  <i class="bi bi-chat-heart-fill"></i> Need Help? Ask Me
+</button>
+
+<div id="chatWidget" class="chat-widget hidden" aria-hidden="true" role="dialog">
+  <!-- Avatar floating above the box (inside widget, when open) -->
+  <img src="assets/images/chat_avatar.png" alt="Telpha Assistant" class="chat-avatar">
+
+  <!-- Maroon header -->
+  <div class="chat-head">
+    <div>
+      <div class="chat-head-sub">Hi there! 👋</div>
+      <div class="chat-title">How can I help you?</div>
+    </div>
+    <button class="chat-close" type="button" onclick="toggleChat()" aria-label="Close chat">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- Messages area -->
+  <div id="chatMessages" class="chat-messages"></div>
+
+  <!-- Input row -->
+  <div class="chat-input-row">
+    <input id="chatInput" type="text" placeholder="Message" autocomplete="off" />
+    <button id="chatSendBtn" type="button" onclick="sendChatMessage()">Send</button>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+
+<script>
+/* ── DEAL COUNTDOWN TIMER ── counts down to midnight every day */
+function updateDealTimer() {
+  var el = document.getElementById('dealTimer');
+  if (!el) return;
+  var now = new Date();
+  var end = new Date(now);
+  end.setHours(23, 59, 59, 0);
+  var diff = end - now;
+  var h = String(Math.floor(diff / 3600000)).padStart(2, '0');
+  var m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+  var s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+  el.textContent = h + ':' + m + ':' + s;
+}
+updateDealTimer();
+setInterval(updateDealTimer, 1000);
+
+
+</script>
+</body>
+</html>
