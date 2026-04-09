@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopKart — Fashion &amp; More</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style (1).css" />
+  <!-- NEW: Structured Data for SEO -->
+  <meta name="description" content="ShopKart - India's premium clothing destination. Shop Women, Men, Kids fashion." />
+</head>
+<body>
+
+  <!-- =====================================================
+       ANNOUNCEMENT BAR (NEW)
+  ===================================================== -->
+  <!-- <div class="announcement-bar" id="announcementBar">
+    <div class="announce-inner">
+      <span class="announce-item"><i class="fas fa-bolt"></i> MEGA SALE: Extra 10% off on prepaid orders</span>
+      <span class="announce-divider">|</span>
+      <span class="announce-item"><i class="fas fa-truck"></i> FREE delivery on orders above ₹499</span>
+      <span class="announce-divider">|</span>
+      <span class="announce-item"><i class="fas fa-undo"></i> Easy 30-day returns</span>
+    </div>
+    <button class="announce-close" id="announceClose"><i class="fas fa-times"></i></button>
+  </div> -->
+
+  <!-- =====================================================
+       TOP NAVBAR  (Meesho-style: white bg)
+  ===================================================== -->
+<!-- Top strip -->
+<div class="tstrip">
+  <div style="display:flex;align-items:center;gap:1.2rem;">
+    <a href="tel:+917559225557"><i class="bi bi-telephone-fill"></i> +91 75592 25557</a>
+    <a href="mailto:telphatech@gmail.com"><i class="bi bi-envelope-fill"></i> telphatech@gmail.com</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <div class="tsoc">
+      <a class="ig" href="#"><i class="bi bi-instagram"></i></a>
+      <a class="fb" href="#"><i class="bi bi-facebook"></i></a>
+      <a class="pi" href="#"><i class="bi bi-pinterest"></i></a>
+      <a class="yt" href="#"><i class="bi bi-youtube"></i></a>
+      <a class="tw" href="#"><i class="bi bi-twitter-x"></i></a>
+      <a class="wa" href="#"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <span style="opacity:.25;color:#fff">|</span>
+    <a href="https://telphatech.com" target="_blank"><i class="bi bi-globe2"></i> telphatech.com</a>
+  </div>
+</div>
+<!-- Second Navbar -->
+  <header class="top-navbar" id="topNavbar">
+    <!-- <div class="navbar-inner"> -->
+
+<nav id="mainNav">
+  <div class="nav-main">
+    <a href="#" class="brand">Telpha<em>Vastra</em></a>
+
+    <ul class="nlinks">
+      <li><a href="#"><i class="bi bi-house-heart ic-home"></i> Home</a></li>
+      <li class="has-dd">
+        <a href="#"><i class="bi bi-bag-heart ic-shop"></i> Shop <i class="bi bi-chevron-down" style="font-size:9px;opacity:.45;margin-left:2px"></i></a>
+        <div class="dd">
+          <a href="#"><i class="bi bi-stars"></i> New Arrivals</a>
+          <a href="#"><i class="bi bi-person-dress"></i> Women</a>
+          <a href="#"><i class="bi bi-person-standing"></i> Men</a>
+          <a href="#"><i class="bi bi-hearts"></i> Kids</a>
+          <a href="#"><i class="bi bi-gem"></i> Festive</a>
+          <a href="#"><i class="bi bi-handbag"></i> Accessories</a>
+        </div>
+      </li>
+      <li class="has-dd">
+        <a href="#"><i class="bi bi-grid-1x2 ic-col"></i> Collections <i class="bi bi-chevron-down" style="font-size:9px;opacity:.45;margin-left:2px"></i></a>
+        <div class="dd">
+          <a href="#"><i class="bi bi-flower1"></i> Kurtas</a>
+          <a href="#"><i class="bi bi-droplet-half"></i> Sarees</a>
+          <a href="#"><i class="bi bi-sun"></i> Lehengas</a>
+          <a href="#"><i class="bi bi-lightning-charge"></i> Western</a>
+        </div>
+      </li>
+      <li><a href="#"><i class="bi bi-fire ic-sale"></i> Sale</a></li>
+      <li><a href="#"><i class="bi bi-headset ic-cont"></i> Contact</a></li>
+    </ul>
+
+    <div class="nctrl">
+      <button class="gpill ai-pill" onclick="alert('AI Trial Studio — Virtual Try-On!')">
+        <i class="bi bi-magic"></i> AI Try-On
+      </button>
+      <button class="gpill cp-pill" onclick="openW()">
+        <i class="bi bi-gift"></i> Win Coupon
+      </button>
+
+      <div class="ndiv"></div>
+
+      <select class="lsel">
+        <option>EN</option><option>हिं</option><option>मर</option><option>GJ</option>
+      </select>
+
+      <button class="ibtn s" title="Search"><i class="bi bi-search"></i></button>
+      <button class="ibtn w" title="Wishlist"><i class="bi bi-heart"></i></button>
+      <button class="ibtn c" title="Cart" style="position:relative">
+        <i class="bi bi-bag"></i><span class="cbadge">3</span>
+      </button>
+      <button class="ibtn th" title="Theme" id="tBtn" onclick="toggleT()">
+        <i class="bi bi-moon-stars" id="tIco"></i>
+      </button>
+
+      <div class="ndiv"></div>
+
+      <button class="auth-btn" title="Login / Register" onclick="alert('Login & Register!')">
+        <i class="bi bi-person-plus-fill"></i>
+      </button>
+
+      <div class="prof-wrap">
+        <div class="prof-icon"><i class="bi bi-person-fill"></i></div>
+        <div class="prof-dd">
+          <div class="pinfo">
+            <div class="pname">Priya Sharma</div>
+            <div class="pemail">priya@email.com</div>
+          </div>
+          <a href="#" class="pda p1"><i class="bi bi-person-circle"></i> My Profile</a>
+          <a href="#" class="pda p2"><i class="bi bi-bag-heart"></i> My Orders</a>
+          <a href="#" class="pda p3"><i class="bi bi-heart-pulse"></i> Wishlist</a>
+          <a href="#" class="pda p4"><i class="bi bi-geo-alt"></i> Addresses</a>
+          <a href="#" class="pda p5"><i class="bi bi-ticket-perforated"></i> My Coupons</a>
+          <a href="#" class="pda p6"><i class="bi bi-magic"></i> AI Trial Studio</a>
+          <a href="#" class="pda p7"><i class="bi bi-star-fill"></i> Rewards</a>
+          <a href="#" class="pda p8"><i class="bi bi-gear"></i> Settings</a>
+          <button class="logout" onclick="alert('Logged out!')"><i class="bi bi-box-arrow-right"></i> Log Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<!-- <div class="hero">
+  <div class="hero-tag">Next-Gen Fashion · AI Powered</div>
+  <h1>Dress Bold,<br><span>Live Beautiful</span></h1>
+  <p>Handcrafted fashion rooted in Indian heritage — styled for the modern soul.</p>
+  <div class="hero-btns">
+    <button class="hbtn1">Shop Collection</button>
+    <button class="hbtn2">AI Try-On <i class="bi bi-magic"></i></button>
+  </div>
+  <i class="bi bi-arrow-down-circle scroll-hint"></i>
+</div>
+<div style="height:50vh;"></div> -->
+
+<!-- Wheel Modal -->
+<!-- <div class="wov" id="wOv">
+  <div class="wmod">
+    <button class="cwh" onclick="closeW()"><i class="bi bi-x-lg"></i></button>
+    <h3>Spin &amp; Win!</h3>
+    <p>Spin to claim your exclusive Telpha Vastra coupon</p>
+    <div style="position:relative;display:inline-block;margin-bottom:.5rem;">
+      <canvas id="wCv" width="220" height="220"></canvas>
+      <div class="wptr">▶</div>
+    </div><br>
+    <button class="spinbtn" id="sBtn" onclick="doSpin()"><i class="bi bi-arrow-clockwise"></i> Spin Now!</button>
+    <div class="cres" id="cRes"></div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+      <!-- Logo -->
+      <!-- <a href="#" class="nav-logo" aria-label="ShopKart home">
+        <span class="logo-word">shop<em>kart</em></span>
+      </a> -->
+
+      <!-- Search with autocomplete suggestions (NEW) -->
+      <!-- <div class="nav-search" id="navSearchWrap">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="globalSearch"
+               placeholder="Search for products, brands and more"
+               autocomplete="off" />
+        <button class="search-clear" id="searchClear" style="display:none;">
+          <i class="fas fa-times"></i>
+        </button> -->
+        <!-- Search Suggestions Dropdown (NEW) -->
+        <!-- <div class="search-suggestions" id="searchSuggestions"></div>
+      </div> -->
+
+      <!-- Right Actions -->
+      <!-- <div class="nav-actions">
+
+        <a href="#" class="nav-action-link hide-md">Become a Supplier</a>
+        <a href="#" class="nav-action-link hide-md">Investor Relations</a> -->
+
+        <!-- Wishlist (NEW) -->
+        <!-- <a href="#" class="nav-icon-btn nav-wish-btn" id="wishlistNav">
+          <span class="wish-icon-wrap">
+            <i class="far fa-heart"></i>
+            <span class="wish-badge" id="wishBadge">0</span>
+          </span>
+          <span class="hide-sm">Wishlist</span>
+        </a> -->
+
+        <!-- Profile dropdown -->
+        <!-- <div class="nav-profile-wrap">
+          <button class="nav-icon-btn" id="profileBtn">
+            <i class="far fa-user"></i>
+            <span class="hide-sm">Profile</span>
+          </button>
+          <div class="profile-dropdown">
+            <div class="profile-drop-top">
+              <i class="fas fa-user-circle profile-avatar-icon"></i>
+              <div>
+                <div class="profile-name">Hello, User!</div>
+                <a href="#" class="profile-login-btn">Login / Sign Up</a>
+              </div>
+            </div>
+            <div class="profile-drop-links">
+              <a href="#"><i class="fas fa-box-open"></i> My Orders</a>
+              <a href="#"><i class="far fa-heart"></i> Wishlist</a>
+              <a href="#"><i class="fas fa-map-marker-alt"></i> My Addresses</a>
+              <a href="#"><i class="fas fa-wallet"></i> My Payments</a>
+              <a href="#"><i class="fas fa-tag"></i> Coupons</a>
+              <a href="#"><i class="fas fa-headset"></i> Customer Support</a>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Cart -->
+        <!-- <a href="#" class="nav-icon-btn nav-cart-btn" id="cartIcon">
+          <span class="cart-icon-wrap">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" id="cartBadge">0</span>
+          </span>
+          <span class="hide-sm">Cart</span>
+        </a> -->
+
+      <!-- </div>/nav-actions -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+      
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    <!-- </div> -->
+  </header>
+
+  <!-- =====================================================
+       CATEGORY NAV (style: text-only links)
+  ===================================================== -->
+  <nav class="cat-navbar" id="catNavbar">
+    <div class="cat-nav-inner">
+
+    <div class="cat-item"><a href="#" class="cat-link">Popular</a></div>
+
+      <!-- WOMEN — full mega menu -->
+      <div class="cat-item has-mega active-cat">
+        <a href="#" class="cat-link">Women</a>
+        <div class="mega-dropdown mega-two-panel">
+          <div class="mega-left-panel">
+            <div class="mega-left-item active" data-panel="women-ethnic">Ethnic Wear</div>
+            <div class="mega-left-item" data-panel="women-western">Women Western &amp; Maternity</div>
+            <div class="mega-left-item" data-panel="women-lingerie">Lingerie &amp; Sleepwear</div>
+            <div class="mega-left-item" data-panel="women-sports">Sports Wear</div>
+            <div class="mega-left-item" data-panel="women-swim">Swim &amp; Beachwear</div>
+            <div class="mega-left-item" data-panel="women-party">Party Dresses</div>
+            <div class="mega-left-item" data-panel="women-winter">Winter Wear</div>
+          </div>
+          <div class="mega-right-panels">
+
+            <!-- Ethnic Wear panel -->
+            <div class="mega-right-panel active" id="panel-women-ethnic">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Ethnic Wear</h4>
+                  <a href="#" data-filter-cat="Ethnic">Sarees</a>
+                  <a href="#" data-filter-cat="Ethnic">Kurtas &amp; Kurtis</a>
+                  <a href="#">Dress Material</a>
+                  <a href="#">Lehenga Choli</a>
+                  <a href="#">Blouse</a>
+                  <a href="#">Kurta Sets &amp; Salwar Suits</a>
+                  <a href="#">Gowns</a>
+                  <a href="#">Dupattas</a>
+                </div>
+                <div class="mega-col">
+                  <h4>Ethnic Bottoms</h4>
+                  <a href="#">Leggings &amp; Churidars</a>
+                  <a href="#">Palazzos</a>
+                  <a href="#">Shararas</a>
+                  <a href="#">Salwars &amp; Patiala</a>
+                  <a href="#">Dhoti Pants</a>
+                  <a href="#">Ethnic Trousers</a>
+                  <a href="#">Saree Shapewear &amp; Petticoats</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Women Western panel -->
+            <div class="mega-right-panel" id="panel-women-western">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Women Western &amp; Maternity Wear</h4>
+                  <a href="#">Topwear</a>
+                  <a href="#">Dresses</a>
+                  <a href="#" data-filter-cat="Jeans">Jeans</a>
+                  <a href="#">Shorts</a>
+                  <a href="#">Skirts</a>
+                  <a href="#">Jeggings &amp; Tights</a>
+                  <a href="#">Trousers &amp; Capris</a>
+                </div>
+                <div class="mega-col">
+                  <h4>Maternity Wear</h4>
+                  <a href="#">Kurti &amp; Topwear</a>
+                  <a href="#">Feeding Bras</a>
+                  <a href="#">Briefs &amp; Bottomwear</a>
+                  <a href="#">Maternity Dresses</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lingerie panel -->
+            <div class="mega-right-panel" id="panel-women-lingerie">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Lingerie &amp; Sleepwear</h4>
+                  <a href="#">Bras</a>
+                  <a href="#">Panties</a>
+                  <a href="#">Lingerie Sets</a>
+                  <a href="#">Night Dresses &amp; Nighties</a>
+                  <a href="#">Shapewear</a>
+                  <a href="#">Camisoles &amp; Slips</a>
+                </div>
+                <div class="mega-col">
+                  <h4>Sleepwear</h4>
+                  <a href="#">Women Nightsuits</a>
+                  <a href="#">Women Nightdress</a>
+                  <a href="#">Pyjama Sets</a>
+                  <a href="#">Other Sleepwear</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sports panel -->
+            <div class="mega-right-panel" id="panel-women-sports">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Sports Wear</h4>
+                  <a href="#">Sports Bottomwear</a>
+                  <a href="#">Sports Bra</a>
+                  <a href="#">Top &amp; Bottom Sets</a>
+                  <a href="#">Sports T-Shirts</a>
+                  <a href="#">Yoga Pants</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Swim panel -->
+            <div class="mega-right-panel" id="panel-women-swim">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Swim &amp; Beachwear</h4>
+                  <a href="#">Swimsuits</a>
+                  <a href="#">Bikini Sets</a>
+                  <a href="#">Cover-Ups</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Party panel -->
+            <div class="mega-right-panel" id="panel-women-party">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Party Dresses</h4>
+                  <a href="#">Cocktail Dresses</a>
+                  <a href="#">Maxi Dresses</a>
+                  <a href="#">Mini Dresses</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Winter panel -->
+            <div class="mega-right-panel" id="panel-women-winter">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Winter Wear</h4>
+                  <a href="#" data-filter-cat="Jackets">Jackets</a>
+                  <a href="#" data-filter-cat="Sweatshirts">Sweatshirts &amp; Hoodies</a>
+                  <a href="#">Shrugs</a>
+                  <a href="#">Coats</a>
+                  <a href="#">Thermal Wear</a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- /mega-right-panels -->
+        </div> <!-- /mega-dropdown -->
+      </div>
+
+      <!-- MEN — full mega menu -->
+      <div class="cat-item has-mega">
+        <a href="#" class="cat-link">Men</a>
+        <div class="mega-dropdown mega-two-panel">
+          <div class="mega-left-panel">
+            <div class="mega-left-item active" data-panel="men-top">Top Wear</div>
+            <div class="mega-left-item" data-panel="men-bottom">Bottom Wear</div>
+            <div class="mega-left-item" data-panel="men-ethnic">Ethnic Wear</div>
+            <div class="mega-left-item" data-panel="men-inner">Innerwear</div>
+            <div class="mega-left-item" data-panel="men-sports">Sports Wear</div>
+            <div class="mega-left-item" data-panel="men-night">Night Wear</div>
+            <div class="mega-left-item" data-panel="men-winter">Winter Wear</div>
+            <div class="mega-left-item" data-panel="men-combo">Combo Store</div>
+          </div>
+          <div class="mega-right-panels">
+            <div class="mega-right-panel active" id="panel-men-top">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Top Wear</h4>
+                  <a href="#" data-filter-cat="T-Shirts">Summer T-Shirts</a>
+                  <a href="#" data-filter-cat="Shirts">Shirts</a>
+                  <a href="#">T-Shirts Combos</a>
+                  <a href="#">Polos &amp; Collar T-Shirts</a>
+                  <a href="#">Tank Tops &amp; Vests</a>
+                  <a href="#">Shirts Combo</a>
+                </div>
+              </div>
+            </div>
+            <div class="mega-right-panel" id="panel-men-bottom">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Bottom Wear</h4>
+                  <a href="#" data-filter-cat="Jeans">Jeans</a>
+                  <a href="#" data-filter-cat="Trousers">Cargos / Trousers</a>
+                  <a href="#">Dhotis / Lungis</a>
+                  <a href="#" data-filter-cat="Shorts">Shorts</a>
+                  <a href="#">Track Pants</a>
+                </div>
+              </div>
+            </div>
+            <div class="mega-right-panel" id="panel-men-ethnic">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Ethnic Wear</h4>
+                  <a href="#" data-filter-cat="Ethnic">Kurtas</a>
+                  <a href="#">Kurta Sets</a>
+                  <a href="#">Nehru Jacket</a>
+                  <a href="#">Sherwanis</a>
+                </div>
+              </div>
+            </div>
+            <div class="mega-right-panel" id="panel-men-inner">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Innerwear</h4>
+                  <a href="#">Vests</a>
+                  <a href="#">Briefs</a>
+                  <a href="#">Boxers</a>
+                  <a href="#">Innerwear Combo</a>
+                </div>
+              </div>
+            </div>
+            <div class="mega-right-panel" id="panel-men-sports">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Sports Wear</h4>
+                  <a href="#" data-filter-cat="Trousers">Trackpants</a>
+                  <a href="#">Tracksuits</a>
+                  <a href="#" data-filter-cat="T-Shirts">Gym T-Shirts</a>
+                  <a href="#">Sports Shorts</a>
+                </div>
+              </div>
+            </div>
+            <div class="mega-right-panel" id="panel-men-night">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Night Wear</h4>
+                  <a href="#">Pyjamas</a>
+                  <a href="#">Night Shorts</a>
+                  <a href="#">Nightsuits</a>
+                  <a href="#">Loungewear</a>
+                </div>
+              </div>
+            </div>
+            <div class="mega-right-panel" id="panel-men-winter">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Winter Wear</h4>
+                  <a href="#">Shrugs</a>
+                  <a href="#" data-filter-cat="Jackets">Jackets</a>
+                  <a href="#" data-filter-cat="Sweatshirts">Sweatshirts</a>
+                  <a href="#">Hoodies</a>
+                  <a href="#">Thermal Wear</a>
+                </div>
+              </div>
+            </div>
+            <div class="mega-right-panel" id="panel-men-combo">
+              <div class="mega-inner">
+                <div class="mega-col">
+                  <h4>Combo Store</h4>
+                  <a href="#">Rakhi Specials</a>
+                  <a href="#">Shirts Combo</a>
+                  <a href="#">Innerwear Combo</a>
+                  <a href="#">T-Shirt Combos</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BABY & KIDS -->
+      <div class="cat-item has-mega">
+        <a href="#" class="cat-link">Baby &amp; Kids</a>
+        <div class="mega-dropdown">
+          <div class="mega-inner">
+            <div class="mega-col">
+              <h4>Girls</h4>
+              <a href="#">Frocks &amp; Dresses</a>
+              <a href="#">Tops &amp; T-Shirts</a>
+              <a href="#">Jeans &amp; Bottoms</a>
+              <a href="#">Ethnic Wear</a>
+            </div>
+            <div class="mega-col">
+              <h4>Boys</h4>
+              <a href="#">T-Shirts &amp; Polos</a>
+              <a href="#">Jeans &amp; Pants</a>
+              <a href="#">Shirts</a>
+              <a href="#">Ethnic Wear</a>
+            </div>
+            <div class="mega-col">
+              <h4>Babies</h4>
+              <a href="#">Rompers &amp; Bodysuits</a>
+              <a href="#">Clothing Sets</a>
+              <a href="#">Nightwear</a>
+            </div>
+            <div class="mega-col">
+              <h4>All Kids</h4>
+              <a href="#">Clothing Sets</a>
+              <a href="#">Sportswear</a>
+              <a href="#">Winter Wear</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Keep existing categories -->
+      <div class="cat-item has-mega">
+        <a href="#" class="cat-link">Kurti, Saree &amp; Lehenga</a>
+        <div class="mega-dropdown">
+          <div class="mega-inner">
+            <div class="mega-col">
+              <h4>Sarees</h4>
+              <a href="#">All Sarees</a>
+              <a href="#">Georgette Sarees</a>
+              <a href="#">Chiffon Sarees</a>
+              <a href="#">Cotton Sarees</a>
+              <a href="#">Silk Sarees</a>
+              <a href="#">Bridal Sarees</a>
+            </div>
+            <div class="mega-col">
+              <h4>Kurtis</h4>
+              <a href="#" data-filter-cat="Ethnic">All Kurtis</a>
+              <a href="#">Anarkali Kurtis</a>
+              <a href="#">Rayon Kurtis</a>
+              <a href="#">Cotton Kurtis</a>
+              <a href="#">Straight Kurtis</a>
+            </div>
+            <div class="mega-col">
+              <h4>Kurta Sets</h4>
+              <a href="#">All Kurta Sets</a>
+              <a href="#">Kurta Palazzo Sets</a>
+              <a href="#">Sharara Sets</a>
+              <a href="#">Cotton Kurta Sets</a>
+            </div>
+            <div class="mega-col">
+              <h4>Lehengas &amp; Gowns</h4>
+              <a href="#">All Lehengas</a>
+              <a href="#">Bridal Lehengas</a>
+              <a href="#">All Gowns</a>
+              <a href="#">Dupattas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-item"><a href="#" class="cat-link">Lingerie</a></div>
+     
+
+    </div>
+  </nav>
+
+  <!-- Mobile overlay + drawer -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">shop<em>kart</em></div>
+      <button id="mobileMenuClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-profile-row">
+      <i class="fas fa-user-circle"></i>
+      <div>
+        <div class="mob-hello">Hello, User!</div>
+        <a href="#" class="mob-login">Login / Sign Up</a>
+      </div>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#">Popular</a></li>
+      <li class="active-mob"><a href="#">Women</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Baby &amp; Kids</a></li>
+      <li><a href="#">Kurti, Saree &amp; Lehenga</a></li>
+      <li><a href="#">Lingerie</a></li>
+     
+    </ul>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-inner">
+      <a href="#">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <a href="#">Women</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Clothing </span>
+    </div>
+  </div>
+
+  <!-- Active Filters Bar (NEW) -->
+  <div class="active-filters-bar" id="activeFiltersBar" style="display:none;">
+    <div class="active-filters-inner">
+      <span class="af-label">Active Filters:</span>
+      <div class="af-tags" id="afTags"></div>
+      <button class="af-clear-all" id="afClearAll">Clear All</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h3>Filters</h3>
+        <button class="clear-all-btn" id="clearAllBtn">CLEAR ALL</button>
+      </div>
+
+      <!-- CATEGORIES (expandable like screenshot) -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="cat-options">
+          <span>CATEGORIES</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="cat-options">
+          <div class="filter-tree">
+            <div class="filter-tree-parent">
+              <i class="fas fa-chevron-down tree-arrow"></i> Clothing 
+            </div>
+            <div class="filter-tree-children">
+              <label class="filter-option"><input type="checkbox" value="T-Shirts" class="cat-filter"/> T-Shirts</label>
+              <label class="filter-option"><input type="checkbox" value="Shirts" class="cat-filter"/> Casual Shirts</label>
+              <label class="filter-option"><input type="checkbox" value="Jeans" class="cat-filter"/> Jeans</label>
+              <label class="filter-option"><input type="checkbox" value="Trousers" class="cat-filter"/> Trousers</label>
+              <label class="filter-option"><input type="checkbox" value="Jackets" class="cat-filter"/> Jackets</label>
+              <label class="filter-option"><input type="checkbox" value="Sweatshirts" class="cat-filter"/> Sweatshirts &amp; Hoodies</label>
+              <label class="filter-option"><input type="checkbox" value="Shorts" class="cat-filter"/> Shorts</label>
+              <label class="filter-option"><input type="checkbox" value="Ethnic" class="cat-filter"/> Ethnic Wear</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GENDER -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="gender-options">
+          <span>GENDER</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="gender-options">
+          <div class="gender-pills">
+            <button class="gender-pill" data-gender="Boys">Boys</button>
+            <button class="gender-pill" data-gender="Girls">Girls</button>
+            <button class="gender-pill active" data-gender="Women">Women</button>
+            <button class="gender-pill" data-gender="Men">Men</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TYPE (NEW) -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="type-options">
+          <span>TYPE</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="type-options">
+          <label class="filter-option"><input type="checkbox" value="Casual" class="type-filter"/> Casual</label>
+          <label class="filter-option"><input type="checkbox" value="Formal" class="type-filter"/> Formal</label>
+          <label class="filter-option"><input type="checkbox" value="Party" class="type-filter"/> Party</label>
+          <label class="filter-option"><input type="checkbox" value="Sports" class="type-filter"/> Sports</label>
+          <label class="filter-option"><input type="checkbox" value="Ethnic" class="type-filter"/> Ethnic</label>
+        </div>
+      </div>
+
+      <!-- BRAND (with search — like screenshot) -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="brand-options">
+          <span>BRAND</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="brand-options">
+          <div class="brand-search-wrap">
+            <i class="fas fa-search"></i>
+            <input type="text" id="brandSearch" placeholder="Search Brand"/>
+          </div>
+          <div class="brand-list" id="brandList">
+            <label class="filter-option"><input type="checkbox" value="Nike" class="brand-filter"/> Nike</label>
+            <label class="filter-option"><input type="checkbox" value="Adidas" class="brand-filter"/> Adidas</label>
+            <label class="filter-option"><input type="checkbox" value="Levis" class="brand-filter"/> Levi's</label>
+            <label class="filter-option"><input type="checkbox" value="Puma" class="brand-filter"/> Puma</label>
+            <label class="filter-option"><input type="checkbox" value="HM" class="brand-filter"/> H&amp;M</label>
+            <label class="filter-option"><input type="checkbox" value="Zara" class="brand-filter"/> Zara</label>
+            <label class="filter-option"><input type="checkbox" value="UCB" class="brand-filter"/> United Colors of Benetton</label>
+            <label class="filter-option"><input type="checkbox" value="Allen Solly" class="brand-filter"/> Allen Solly</label>
+            <label class="filter-option"><input type="checkbox" value="AELY SHINE" class="brand-filter"/> AELY SHINE</label>
+            <label class="filter-option"><input type="checkbox" value="Mango" class="brand-filter"/> Mango</label>
+            <label class="filter-option"><input type="checkbox" value="Only" class="brand-filter"/> ONLY</label>
+            <label class="filter-option"><input type="checkbox" value="Vero Moda" class="brand-filter"/> Vero Moda</label>
+          </div>
+          <button class="show-more-btn" id="showMoreBrands">+ 20 more brands</button>
+        </div>
+      </div>
+
+      <!-- COLOR (with circles — NEW) -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="color-options">
+          <span>COLOR</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="color-options">
+          <div class="color-filter-grid">
+            <div class="color-swatch-item" data-color="Black"><div class="color-circle" style="background:#1a1a1a;"></div><span>Black</span></div>
+            <div class="color-swatch-item" data-color="White"><div class="color-circle" style="background:#ffffff;border:1.5px solid #ddd;"></div><span>White</span></div>
+            <div class="color-swatch-item" data-color="Red"><div class="color-circle" style="background:#e53935;"></div><span>Red</span></div>
+            <div class="color-swatch-item" data-color="Blue"><div class="color-circle" style="background:#1976d2;"></div><span>Blue</span></div>
+            <div class="color-swatch-item" data-color="Green"><div class="color-circle" style="background:#388e3c;"></div><span>Green</span></div>
+            <div class="color-swatch-item" data-color="Yellow"><div class="color-circle" style="background:#f9a825;"></div><span>Yellow</span></div>
+            <div class="color-swatch-item" data-color="Pink"><div class="color-circle" style="background:#e91e63;"></div><span>Pink</span></div>
+            <div class="color-swatch-item" data-color="Maroon"><div class="color-circle" style="background:#A63D32;"></div><span>Maroon</span></div>
+            <div class="color-swatch-item" data-color="Grey"><div class="color-circle" style="background:#9e9e9e;"></div><span>Grey</span></div>
+            <div class="color-swatch-item" data-color="Orange"><div class="color-circle" style="background:#ff6f00;"></div><span>Orange</span></div>
+            <div class="color-swatch-item" data-color="Navy"><div class="color-circle" style="background:#283593;"></div><span>Navy</span></div>
+            <div class="color-swatch-item" data-color="Beige"><div class="color-circle" style="background:#E8DCCB;border:1.5px solid #ddd;"></div><span>Beige</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FABRIC (NEW) -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="fabric-options">
+          <span>FABRIC</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="fabric-options">
+          <label class="filter-option"><input type="checkbox" value="Cotton" class="fabric-filter"/> Cotton</label>
+          <label class="filter-option"><input type="checkbox" value="Polyester" class="fabric-filter"/> Polyester</label>
+          <label class="filter-option"><input type="checkbox" value="Rayon" class="fabric-filter"/> Rayon</label>
+          <label class="filter-option"><input type="checkbox" value="Silk" class="fabric-filter"/> Silk</label>
+          <label class="filter-option"><input type="checkbox" value="Denim" class="fabric-filter"/> Denim</label>
+          <label class="filter-option"><input type="checkbox" value="Linen" class="fabric-filter"/> Linen</label>
+          <label class="filter-option"><input type="checkbox" value="Wool" class="fabric-filter"/> Wool</label>
+        </div>
+      </div>
+
+      <!-- SIZE (with pill buttons — NEW) -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="size-options">
+          <span>SIZE</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="size-options">
+          <div class="size-pill-grid">
+            <button class="size-pill" data-size="XS">XS</button>
+            <button class="size-pill" data-size="S">S</button>
+            <button class="size-pill" data-size="M">M</button>
+            <button class="size-pill" data-size="L">L</button>
+            <button class="size-pill" data-size="XL">XL</button>
+            <button class="size-pill" data-size="XXL">XXL</button>
+            <button class="size-pill size-pill-wide" data-size="Free Size">Free Size</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRICE -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="price-options">
+          <span>PRICE</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="price-options">
+          <div class="price-range-display">
+            <span>₹<strong id="priceMinDisplay">100</strong></span>
+            <span>₹<strong id="priceMaxDisplay">5000</strong></span>
+          </div>
+          <div class="price-slider-wrap">
+            <div class="price-track"><div class="price-fill" id="priceFill"></div></div>
+            <input type="range" id="priceRangeMin" min="100" max="5000" value="100" step="50"/>
+            <input type="range" id="priceRangeMax" min="100" max="5000" value="5000" step="50"/>
+          </div>
+          <div class="price-presets">
+            <label class="filter-option"><input type="radio" name="pricePreset" value="0-500" class="price-preset"/> Under ₹500</label>
+            <label class="filter-option"><input type="radio" name="pricePreset" value="500-1000" class="price-preset"/> ₹500 – ₹1,000</label>
+            <label class="filter-option"><input type="radio" name="pricePreset" value="1000-2000" class="price-preset"/> ₹1,000 – ₹2,000</label>
+            <label class="filter-option"><input type="radio" name="pricePreset" value="2000-5000" class="price-preset"/> ₹2,000 – ₹5,000</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- CUSTOMER RATINGS -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="rating-options">
+          <span>CUSTOMER RATINGS</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="rating-options">
+          <label class="filter-option rating-filter-opt">
+            <input type="checkbox" value="4" class="rating-filter"/>
+            <span class="star-badge">4 <i class="fas fa-star"></i></span> &amp; above
+          </label>
+          <label class="filter-option rating-filter-opt">
+            <input type="checkbox" value="3" class="rating-filter"/>
+            <span class="star-badge">3 <i class="fas fa-star"></i></span> &amp; above
+          </label>
+        </div>
+      </div>
+
+      <!-- FIT (NEW) -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="fit-options">
+          <span>FIT</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="fit-options">
+          <label class="filter-option"><input type="checkbox" value="Regular" class="fit-filter"/> Regular</label>
+          <label class="filter-option"><input type="checkbox" value="Oversized" class="fit-filter"/> Oversized</label>
+          <label class="filter-option"><input type="checkbox" value="Slim" class="fit-filter"/> Slim</label>
+          <label class="filter-option"><input type="checkbox" value="Loose" class="fit-filter"/> Loose Fit</label>
+          <label class="filter-option"><input type="checkbox" value="Comfort" class="fit-filter"/> Comfort Fit</label>
+          <div class="show-more-text" id="fitMoreSection" style="display:none;">
+            <label class="filter-option"><input type="checkbox" value="Athletic" class="fit-filter"/> Athletic</label>
+            <label class="filter-option"><input type="checkbox" value="Skinny" class="fit-filter"/> Skinny</label>
+          </div>
+          <button class="show-more-btn" id="showMoreFit">+ 21 more</button>
+        </div>
+      </div>
+
+      <!-- DISCOUNT -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="disc-options">
+          <span>DISCOUNT</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="disc-options">
+          <label class="filter-option"><input type="radio" name="discountFilter" value="10" class="disc-filter"/> 10% and above</label>
+          <label class="filter-option"><input type="radio" name="discountFilter" value="20" class="disc-filter"/> 20% and above</label>
+          <label class="filter-option"><input type="radio" name="discountFilter" value="30" class="disc-filter"/> 30% and above</label>
+          <label class="filter-option"><input type="radio" name="discountFilter" value="50" class="disc-filter"/> 50% and above</label>
+          <label class="filter-option"><input type="radio" name="discountFilter" value="70" class="disc-filter"/> 70% and above</label>
+        </div>
+      </div>
+
+      <!-- SURFACE STYLING (NEW) -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="surface-options">
+          <span>SURFACE STYLING</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="surface-options">
+          <label class="filter-option"><input type="checkbox" value="Cutout" class="surface-filter"/> Cutout</label>
+          <label class="filter-option"><input type="checkbox" value="Mirror Work" class="surface-filter"/> Mirror Work</label>
+          <label class="filter-option"><input type="checkbox" value="Ruffles" class="surface-filter"/> Ruffles</label>
+          <label class="filter-option"><input type="checkbox" value="Sequinned" class="surface-filter"/> Sequinned</label>
+          <label class="filter-option"><input type="checkbox" value="Smocking" class="surface-filter"/> Smocking / Shirred</label>
+          <label class="filter-option"><input type="checkbox" value="Tassels" class="surface-filter"/> Tassels</label>
+          <label class="filter-option"><input type="checkbox" value="Tie-Ups" class="surface-filter"/> Tie-Ups</label>
+        </div>
+      </div>
+
+      <!-- TOGGLES: New Arrivals + Offers (NEW) -->
+      <div class="filter-block">
+        <div class="filter-block-header" data-toggle="toggle-options">
+          <span>SPECIAL FILTERS</span><i class="fas fa-chevron-up toggle-icon"></i>
+        </div>
+        <div class="filter-options" id="toggle-options">
+          <div class="toggle-row">
+            <label class="toggle-label">New Arrivals Only</label>
+            <label class="toggle-switch">
+              <input type="checkbox" id="newArrivalsToggle"/>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-row">
+            <label class="toggle-label">Special Offers</label>
+            <label class="toggle-switch">
+              <input type="checkbox" id="offersToggle"/>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-row">
+            <label class="toggle-label">Gold / Premium</label>
+            <label class="toggle-switch">
+              <input type="checkbox" id="premiumToggle"/>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- Listing -->
+    <section class="listing-area">
+      <div class="listing-header">
+        <div class="listing-title-wrap">
+          <!-- Mobile filter toggle button -->
+          <button class="filter-toggle-mobile" id="filterToggleMobile">
+            <i class="fas fa-sliders-h"></i> Filters
+          </button>
+          <div class="listing-title">
+            Women's Clothing
+            <span class="listing-count">(<span id="resultCount">0</span> items)</span>
+          </div>
+        </div>
+        <div class="listing-sort">
+          <span class="sort-label">Sort By</span>
+          <div class="sort-options">
+            <button class="sort-btn active" data-sort="relevance">Relevance</button>
+            <button class="sort-btn" data-sort="price-asc">Price: Low to High</button>
+            <button class="sort-btn" data-sort="price-desc">Price: High to Low</button>
+            <button class="sort-btn" data-sort="rating">Popularity</button>
+            <button class="sort-btn" data-sort="newest">Newest First</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="promo-banner">
+        <div class="promo-item promo-primary"><i class="fas fa-bolt"></i><span>Flash Sale — Up to 80% Off on Top Brands!</span></div>
+        <div class="promo-item promo-green"><i class="fas fa-truck"></i><span>Free Delivery on orders above ₹499</span></div>
+        <div class="promo-item promo-warm"><i class="fas fa-shield-alt"></i><span>ShopKart Assured — Quality Guaranteed</span></div>
+      </div>
+
+      <!-- Skeleton loader (NEW) -->
+      <div class="product-grid skeleton-grid" id="skeletonGrid">
+        <div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line sk-short"></div><div class="sk-line sk-price"></div></div>
+        <div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line sk-short"></div><div class="sk-line sk-price"></div></div>
+        <div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line sk-short"></div><div class="sk-line sk-price"></div></div>
+        <div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line sk-short"></div><div class="sk-line sk-price"></div></div>
+      </div>
+
+      <div class="product-grid" id="productGrid" style="display:none;"></div>
+
+      <div class="no-results" id="noResults" style="display:none;">
+        <i class="fas fa-search"></i>
+        <h3>No results found</h3>
+        <p>Try adjusting your filters or search terms</p>
+        <button class="btn-primary" id="resetFiltersBtn">Reset Filters</button>
+      </div>
+
+      <div class="pagination" id="pagination" style="display:none;">
+        <button class="page-prev" id="pagePrev"><i class="fas fa-chevron-left"></i> Previous</button>
+        <div class="page-nums" id="pageNums"></div>
+        <button class="page-next" id="pageNext">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+  </div><!-- /main-content -->
+
+  <!-- QUICK VIEW MODAL (NEW) -->
+  <div class="qv-overlay" id="qvOverlay">
+    <div class="qv-modal" id="qvModal">
+      <button class="qv-close" id="qvClose"><i class="fas fa-times"></i></button>
+      <div class="qv-img-wrap">
+        <img id="qvImage" src="" alt="" />
+        <div class="qv-badges" id="qvBadges"></div>
+      </div>
+      <div class="qv-info">
+        <div class="qv-brand" id="qvBrand"></div>
+        <div class="qv-title" id="qvTitle"></div>
+        <div class="qv-rating-row" id="qvRating"></div>
+        <div class="qv-price-row" id="qvPrice"></div>
+        <div class="qv-section-label">Select Size</div>
+        <div class="qv-sizes" id="qvSizes"></div>
+        <div class="qv-section-label">Color</div>
+        <div class="qv-colors" id="qvColors"></div>
+        <div class="qv-actions">
+          <button class="qv-cart-btn" id="qvCartBtn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+          <button class="qv-wish-btn" id="qvWishBtn"><i class="far fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="qv-delivery-info">
+          <i class="fas fa-truck"></i> Free delivery on this order &nbsp;|&nbsp; <i class="fas fa-undo"></i> Easy 30-day returns
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <footer class="site-footer"> -->
+    <!-- Footer -->
+<footer>
+  <div class="finn">
+    <div class="frow">
+      <div>
+        <div class="fbrand">TelphaVastra<small>BY TELPHATECH LLP · PUNE</small></div>
+        <p class="fdesc">Handcrafted fashion for the modern Indian soul. Rooted in tradition, styled for today.</p>
+      </div>
+      <div class="fcon">
+        <a href="tel:+917559225557"><i class="bi bi-telephone-fill"></i> +91 75592 25557</a>
+        <a href="mailto:telphatech@gmail.com"><i class="bi bi-envelope-fill"></i> telphatech@gmail.com</a>
+        <a href="https://telphatech.com" target="_blank"><i class="bi bi-globe2"></i> telphatech.com</a>
+        <a href="#"><i class="bi bi-geo-alt-fill"></i> Pune, Maharashtra, India</a>
+      </div>
+      <div>
+        <div style="font-family:'Montserrat',sans-serif;font-size:10.5px;color:#a07060;letter-spacing:.08em;font-weight:700;margin-bottom:10px;">FOLLOW US</div>
+        <div class="fsoc">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-pinterest"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="fbtm">
+      <div>Crafted with <i class="bi bi-heart-fill fheart"></i> by TelphaTech LLP, Pune</div>
+      <div class="flinks">
+        <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Shipping</a><a href="#">Returns</a>
+      </div>
+      <div>© 2026 TelphaTech LLP. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+  
+  <script src="app.js"></script>
+</body>
+</html>
